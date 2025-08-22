@@ -1,0 +1,16 @@
+.wrap {
+    width: 100%;
+    background-color: var(--bg-color);
+}
+
+.headerBlock {
+    width: 100%;
+}
+
+.outletBlock {
+    width: 100%;
+}
+
+.footerBlock {
+    width: 100%;
+}
