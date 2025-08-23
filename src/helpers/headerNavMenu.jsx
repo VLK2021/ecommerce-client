@@ -12,8 +12,8 @@ const headerNavMenu = [
         to: '/delivery',
     },
     {
-        label: '',
-        to: '',
+        label: 'Про повернення',
+        to: '/return',
     },
     {
         label: 'Контакти',

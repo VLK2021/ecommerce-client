@@ -9,12 +9,12 @@ const Header = () => {
 
     return (
         <div className={css.wrap}>
-            <div className={css.infoHeader}>
-                <InfoHeader/>
-            </div>
-
             <div className={css.menuHeader}>
                 <MenuHeader/>
+            </div>
+
+            <div className={css.infoHeader}>
+                <InfoHeader/>
             </div>
         </div>
     );
