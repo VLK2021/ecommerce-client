@@ -11,8 +11,24 @@
     width: 60%;
 }
 
-
+.callbackBlock {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 .switcherBlock {
+    width: 5%;
     height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loginBlock {
+    width: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

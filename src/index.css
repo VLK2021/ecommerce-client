@@ -52,27 +52,32 @@
      /*тема за замовчуванням (light) */
     --bg-color: var(--el-color-white);
     --card-bg: var(--el-color-primary-light-9);
+    --bg-header-footer: var(--el-color-primary-dark-2);
+    --bg-info-header: var(--el-color-primary-light-5);
     --bg-color-hr: var(--el-color-info-light-8);
     --bg-button: var(--el-color-red-star);
     --text-color: var(--el-color-black);
     --text-secondary: var(--el-color-menu-light);
+
     --primary-color: var(--el-color-primary);
     --secondary-color: var(--el-color-primary-light-3);
     --error-color: var(--el-color-error);
     --aside-bg: var(--el-color-primary-light-9);
     --aside-text: var(--el-color-black);
     --aside-hover: var(--el-color-primary-light-7);
-
 }
 
 /* dark */
 [data-theme='dark'] {
     --bg-color: var(--el-color-menu-darkest);
     --card-bg: var(--el-color-menu-base);
+    --bg-header-footer: var(--el-color-menu-darkest);
+    --bg-info-header: var(--el-color-menu-lighter);
     --bg-color-hr: var(--el-color-menu-base);
     --bg-button: var(--el-color-red-star);
     --text-color: var(--el-color-white);
     --text-secondary: var(--el-color-info-light-7);
+
     --primary-color: var(--el-color-primary-dark-2);
     --secondary-color: var(--el-color-primary-light-3);
     --error-color: var(--el-color-error-dark-2);

@@ -1,3 +1,4 @@
 .wrap {
     width: 100%;
+    background-color: var(--bg-info-header);
 }
