@@ -4,3 +4,5 @@ export * from './InfoHeader/InfoHeader.jsx';
 export * from './ListMenuHeader/ListMenuHeader.jsx';
 export * from './LoginLogout/LoginLogout.jsx';
 export * from './Callback/Callback.jsx';
+export * from './CartIcon/CartIcon.jsx';
+export * from './FavoritesIcon/FavoritesIcon.jsx';

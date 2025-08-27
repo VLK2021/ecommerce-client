@@ -1,6 +1,8 @@
 import React from 'react';
 
 import css from './InfoHeader.module.css';
+import {CartIcon} from "../CartIcon/CartIcon.jsx";
+import {FavoritesIcon} from "../FavoritesIcon/FavoritesIcon.jsx";
 
 
 const InfoHeader = () => {
@@ -8,6 +10,10 @@ const InfoHeader = () => {
         <div className={css.wrap}>
             <div>
                 VV-SHOP
+            </div>
+
+            <div>
+                catalog
             </div>
 
             <div>
@@ -22,8 +28,9 @@ const InfoHeader = () => {
                 icons
             </div>
 
-            <div>
-                like and card
+            <div className={css.cartLikeBlock}>
+                <FavoritesIcon/>
+                <CartIcon/>
             </div>
         </div>
     );
