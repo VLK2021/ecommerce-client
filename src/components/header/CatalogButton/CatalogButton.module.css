@@ -1,0 +1,63 @@
+.wrap {
+    width: 100%;
+    position: relative;
+    display: inline-flex;
+}
+
+.btn {
+    width: 100%;
+    gap: 12px;
+    padding: 12px 20px;
+    background: var(--bg-button);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-weight: 800;
+    letter-spacing: .02em;
+    text-transform: uppercase;
+    transition: transform .12s ease, filter .12s ease, box-shadow .12s ease;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn:hover {
+    filter: brightness(1.05);
+    transform: translateY(-1px);
+}
+
+.btn:active {
+    transform: translateY(0);
+    filter: brightness(.98);
+}
+
+.iconLeft, .iconRight { color: currentColor; }
+.iconLeft { font-size: 18px; }
+.iconRight { font-size: 12px; margin-left: 4px; }
+.label { line-height: 1; }
+
+/* меню — вирівняне по правому краю кнопки, тільки по КЛІКУ */
+.menu {
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #fff;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+    padding: 8px 0;
+    min-width: 180px;
+    z-index: 100;
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-6px);
+    pointer-events: none;
+    transition: opacity .18s ease, transform .18s ease, visibility .18s ease;
+}
+
+.open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: auto;
+}

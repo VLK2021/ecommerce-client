@@ -1,0 +1,24 @@
+.wrap {
+    width: 100%;
+    display: flex;
+    gap: 14px;
+}
+
+.iconBox {
+    width: 33px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 33px;
+    border-radius: 8px;
+    background: var( --bg-header-footer);
+    color: #fff;
+    font-size: 20px;
+    transition: all 0.2s ease;
+    text-decoration: none;
+}
+
+.iconBox:hover {
+    background: #d32f2f;       /* червоний при наведенні */
+    transform: translateY(-2px);
+}

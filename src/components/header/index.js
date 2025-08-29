@@ -6,3 +6,5 @@ export * from './LoginLogout/LoginLogout.jsx';
 export * from './Callback/Callback.jsx';
 export * from './CartIcon/CartIcon.jsx';
 export * from './FavoritesIcon/FavoritesIcon.jsx';
+export * from './CatalogButton/CatalogButton.jsx';
+export * from './SocialIcons/SocialIcons.jsx';

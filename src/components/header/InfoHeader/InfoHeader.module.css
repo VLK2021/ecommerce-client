@@ -8,6 +8,35 @@
     align-items: center;
 }
 
+.logoBlock {
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 0.5rem;
+    box-sizing: border-box;
+}
+
+.catalogBlock {
+    width: 20%;
+    background-color: #7b7b9b;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.searchBlock {
+    width:30%;
+}
+
+.timeWorkBlock {
+    width: 18%;
+}
+
+.iconsBlock {
+    width: 15%;
+}
+
 .cartLikeBlock {
     width: 7%;
     display: flex;
