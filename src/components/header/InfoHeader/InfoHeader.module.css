@@ -27,10 +27,16 @@
 
 .searchBlock {
     width:30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .timeWorkBlock {
     width: 18%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .iconsBlock {

@@ -8,3 +8,5 @@ export * from './CartIcon/CartIcon.jsx';
 export * from './FavoritesIcon/FavoritesIcon.jsx';
 export * from './CatalogButton/CatalogButton.jsx';
 export * from './SocialIcons/SocialIcons.jsx';
+export * from './WorkingHours/WorkingHours.jsx';
+export * from './SearchBar/SearchBar.jsx';

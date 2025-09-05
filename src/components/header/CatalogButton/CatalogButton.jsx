@@ -37,7 +37,10 @@ const CatalogButton = () => {
             </button>
 
             {/* Меню (поки заглушка) */}
-            <div className={`${css.menu} ${open ? css.open : ""}`} role="menu" onClick={(e)=>e.stopPropagation()}>
+            <div className={`${css.menu} ${open ? css.open : ""}`}
+                 role="menu"
+                 onClick={(e)=>e.stopPropagation()}
+            >
                 dsfsdfs
             </div>
         </div>

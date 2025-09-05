@@ -5,6 +5,8 @@ import {CartIcon} from "../CartIcon/CartIcon.jsx";
 import {FavoritesIcon} from "../FavoritesIcon/FavoritesIcon.jsx";
 import {CatalogButton} from "../CatalogButton/CatalogButton.jsx";
 import {SocialIcons} from "../SocialIcons/SocialIcons.jsx";
+import {WorkingHours} from "../WorkingHours/WorkingHours.jsx";
+import {SearchBar} from "../SearchBar/SearchBar.jsx";
 
 
 const InfoHeader = () => {
@@ -21,11 +23,11 @@ const InfoHeader = () => {
             </div>
 
             <div className={css.searchBlock}>
-                search
+               <SearchBar/>
             </div>
 
             <div className={css.timeWorkBlock}>
-                time work
+                <WorkingHours />
             </div>
 
             <div className={css.iconsBlock}>

@@ -12,7 +12,7 @@
 }
 
 .iconBox:hover {
-    background: #444;
+    background: var(--bg-button);
 }
 
 .icon {

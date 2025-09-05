@@ -19,6 +19,6 @@
 }
 
 .iconBox:hover {
-    background: #d32f2f;       /* червоний при наведенні */
+    background: var(--bg-button);
     transform: translateY(-2px);
 }
