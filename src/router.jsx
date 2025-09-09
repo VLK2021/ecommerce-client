@@ -1,10 +1,25 @@
 import {createBrowserRouter, Navigate} from "react-router-dom";
 
-import {MainLayout, PrivateLayout, PublicLayout} from "./layouts/index.js";
-import {AboutPage, ContactsPage, HomePage, PayDeliveryPage, ReturnPage} from "./pages/index.js";
+import {AuthLayout, MainLayout, PrivateLayout, PublicLayout} from "./layouts/index.js";
+import {
+    AboutPage,
+    ContactsPage,
+    HomePage,
+    LoginPage,
+    PayDeliveryPage,
+    RegistrationPage,
+    ReturnPage
+} from "./pages/index.js";
 
 
 const router = createBrowserRouter([
+    {
+        element: <AuthLayout/>, children: [
+            {path: "/register", element: <RegistrationPage/>},
+            {path: "/login", element: <LoginPage/>},
+        ]
+    },
+
     {
         path: "/", element: <MainLayout/>, children: [
             {index: true, element: <Navigate to={'/home'}/>},
@@ -13,7 +28,6 @@ const router = createBrowserRouter([
             {path: "/delivery", element: <PayDeliveryPage/>},
             {path: "/return", element: <ReturnPage/>},
             {path: "/contacts", element: <ContactsPage/>},
-
             {
                 element: <PublicLayout/>, children: []
             },
