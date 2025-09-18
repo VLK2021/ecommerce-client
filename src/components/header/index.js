@@ -10,3 +10,4 @@ export * from './CatalogButton/CatalogButton.jsx';
 export * from './SocialIcons/SocialIcons.jsx';
 export * from './WorkingHours/WorkingHours.jsx';
 export * from './SearchBar/SearchBar.jsx';
+export * from './CategoryList/CategoryList.jsx';

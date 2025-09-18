@@ -1,7 +1,8 @@
-import React, { useEffect, useRef, useState } from "react";
-import { FaBars, FaChevronDown } from "react-icons/fa";
+import React, {useEffect, useRef, useState} from "react";
+import {FaBars, FaChevronDown} from "react-icons/fa";
 
 import css from "./CatalogButton.module.css";
+import {CategoryList} from "../CategoryList/CategoryList.jsx";
 
 
 const CatalogButton = () => {
@@ -29,22 +30,21 @@ const CatalogButton = () => {
                 aria-haspopup="menu"
                 aria-expanded={open}
             >
-                <FaBars className={css.iconLeft} />
+                <FaBars className={css.iconLeft}/>
 
                 <span className={css.label}>Каталог</span>
 
-                <FaChevronDown className={css.iconRight} />
+                <FaChevronDown className={css.iconRight}/>
             </button>
 
-            {/* Меню (поки заглушка) */}
             <div className={`${css.menu} ${open ? css.open : ""}`}
                  role="menu"
-                 onClick={(e)=>e.stopPropagation()}
+                 onClick={(e) => e.stopPropagation()}
             >
-                dsfsdfs
+                <CategoryList/>
             </div>
         </div>
     );
 };
 
-export { CatalogButton };
+export {CatalogButton};
