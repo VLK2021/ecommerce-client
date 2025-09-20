@@ -3,6 +3,7 @@ import {useDispatch, useSelector} from "react-redux";
 
 import css from './CategoryList.module.css';
 import {categoryActions} from "../../../store/slices/categorySlice.jsx";
+import {NavLink} from "react-router-dom";
 
 
 const CategoryList = () => {
@@ -15,13 +16,14 @@ const CategoryList = () => {
     }, [dispatch, trigger]);
 
 
-
     return (
         <div className={css.wrap}>
             {categories.length > 0 &&
                 categories.map((category) => (
                     <div key={category.id} className={css.categoryItem}>
-                        {category.name}
+                        <NavLink to={`/category/${category.id}`}>
+                            {category.name}
+                        </NavLink>
                     </div>
                 ))}
         </div>

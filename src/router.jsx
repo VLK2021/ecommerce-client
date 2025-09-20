@@ -2,7 +2,7 @@ import {createBrowserRouter, Navigate} from "react-router-dom";
 
 import {AuthLayout, MainLayout, PrivateLayout, PublicLayout} from "./layouts/index.js";
 import {
-    AboutPage,
+    AboutPage, CategoryProductsPage,
     ContactsPage,
     HomePage,
     LoginPage,
@@ -28,8 +28,11 @@ const router = createBrowserRouter([
             {path: "/delivery", element: <PayDeliveryPage/>},
             {path: "/return", element: <ReturnPage/>},
             {path: "/contacts", element: <ContactsPage/>},
+
             {
-                element: <PublicLayout/>, children: []
+                element: <PublicLayout/>, children: [
+                    {path: "/category/:id", element: <CategoryProductsPage/>},
+                ]
             },
             {
                 element: <PrivateLayout/>, children: []

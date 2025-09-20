@@ -48,6 +48,11 @@
     left: 120%;
 }
 
+.categoryItem a {
+    color: var(--aside-text);
+}
+
+
 /* Анімація появи списку */
 @keyframes fadeIn {
     from {
