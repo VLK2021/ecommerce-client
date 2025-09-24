@@ -6,6 +6,7 @@ import css from './CategoryProductsList.module.css';
 import {productActions} from "../../store/slices/productSlice.jsx";
 
 
+
 const CategoryProductsList = () => {
     const {id: categoryId} = useParams();
     const dispatch = useDispatch();
