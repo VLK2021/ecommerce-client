@@ -4,7 +4,7 @@ import {useDispatch, useSelector} from "react-redux";
 
 import css from './CategoryProductsList.module.css';
 import {productActions} from "../../store/slices/productSlice.jsx";
-
+import {ProductCard} from "../ProductCard/ProductCard.jsx";
 
 
 const CategoryProductsList = () => {
@@ -18,21 +18,24 @@ const CategoryProductsList = () => {
 
 
     useEffect(() => {
-        dispatch(productActions.getProductsByCategory({page, limit, categoryId}))
+        dispatch(productActions.getProductsByCategory({page, limit, categoryId}));
     }, [categoryId, dispatch, limit, page, trigger]);
 
 
     return (
         <div className={css.wrap}>
-            {products.length > 0 ? (
-                products.map(p => (
-                    <div key={p.id}>
-                        {p.name}
-                    </div>
-                ))
+            <div>menu sort</div>
+
+            <div>
+                {products.length > 0 ? (
+                products.map(obj => <ProductCard
+                    key={obj.id}
+                    product={obj}
+                />)
             ) : (
                 <p>Товари не знайдено</p>
             )}
+            </div>
         </div>
     );
 };

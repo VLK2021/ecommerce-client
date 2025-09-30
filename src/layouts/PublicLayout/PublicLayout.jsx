@@ -1,12 +1,14 @@
 import React from 'react';
+import {Outlet} from "react-router-dom";
 
 import css from './PublicLayout.module.css';
-import {Outlet} from "react-router-dom";
 
 
 const PublicLayout = () => {
     return (
         <div className={css.wrap}>
+            <div className={css.asideBlock}>aside</div>
+
             <div className={css.outletBlock}>
                 <Outlet/>
             </div>

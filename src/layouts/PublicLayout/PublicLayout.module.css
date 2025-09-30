@@ -1,7 +1,16 @@
 .wrap {
     width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.asideBlock {
+    width: 20%;
+    background-color: #7e57c2;
 }
 
 .outletBlock {
-    width: 100%;
+    width: 80%;
+    background-color: #7b7b9b;
 }
