@@ -9,6 +9,7 @@ import { ProductCard } from "../ProductCard/ProductCard.jsx";
 import { CategoryProductListName } from "../CategoryProductListName/CategoryProductListName.jsx";
 import { ProductSortBar } from "../ProductSortBar/ProductSortBar.jsx";
 
+
 const CategoryProductsList = () => {
     const { id: categoryId } = useParams();
     const dispatch = useDispatch();
@@ -16,19 +17,23 @@ const CategoryProductsList = () => {
     const [viewType, setViewType] = useState("grid");
 
     const { products, trigger } = useSelector((store) => store.products);
-    const { page, limit, sortValue } = useSelector(store => store.productsCategoryQuery);
+    const { page, limit, sortValue } = useSelector((store) => store.productsCategoryQuery);
 
-    // ⚙️ Отримуємо продукти при зміні категорії, сторінки або сортування
     useEffect(() => {
-        dispatch(productActions.getProductsByCategory({
-            page,
-            limit,
-            categoryId,
-            sortValue
-        }));
-    }, [categoryId, dispatch, limit, page, sortValue, trigger]);
+        const [sortBy, sortOrder] = sortValue ? sortValue.split("_") : ["", ""];
 
-    // ⚙️ Зміна сортування
+        dispatch(
+            productActions.getProductsByCategory({
+                page,
+                limit,
+                categoryId,
+                sortBy,
+                sortOrder,
+            })
+        );
+    }, [categoryId, page, limit, sortValue, trigger, dispatch]);
+
+    // ✅ Клік по кнопці сортування
     const handleSortChange = (sortType) => {
         dispatch(productsCategoryQueryActions.setSortBy(sortType));
     };
