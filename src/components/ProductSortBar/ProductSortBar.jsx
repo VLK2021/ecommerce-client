@@ -4,6 +4,7 @@ import { FaThLarge, FaList } from "react-icons/fa";
 import css from "./ProductSortBar.module.css";
 
 
+
 const ProductSortBar = ({ sortType, onSortChange, viewType, onViewChange }) => {
     const handleSort = (type) => {
         if (onSortChange) onSortChange(type);
@@ -16,17 +17,17 @@ const ProductSortBar = ({ sortType, onSortChange, viewType, onViewChange }) => {
                 <span className={css.label}>Сортувати за:</span>
 
                 <button
-                    className={sortType === "new" ? css.active : ""}
-                    onClick={() => handleSort("new")}
+                    className={sortType === "name_asc" ? css.active : ""}
+                    onClick={() => handleSort("name_asc")}
                 >
-                    Новинки
+                    Назва (А-Я)
                 </button>
 
                 <button
-                    className={sortType === "popular" ? css.active : ""}
-                    onClick={() => handleSort("popular")}
+                    className={sortType === "name_desc" ? css.active : ""}
+                    onClick={() => handleSort("name_desc")}
                 >
-                    Популярні
+                    Назва (Я-А)
                 </button>
 
                 <button

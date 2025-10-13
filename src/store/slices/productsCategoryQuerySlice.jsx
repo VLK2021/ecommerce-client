@@ -5,6 +5,10 @@ const initialState = {
     page: 1,
     limit: 20,
     categoryId: '',
+    search: '',
+    sortBy: '',
+    sortOrder: '',
+    sortValue: '',
 }
 
 
@@ -22,10 +26,29 @@ const productsCategoryQuerySlice = createSlice({
             state.categoryId = action.payload;
             state.page = 1;
         },
-        resetFilters: (state) => {
-            state.categoryId = '';
+        setSearch: (state, action) => {
+            state.search = action.payload;
             state.page = 1;
-        }
+        },
+        setSortBy: (state, action) => {
+            const [field, order] = action.payload.split('_');
+            state.sortBy = field;
+            state.sortOrder = order;
+            state.sortValue = action.payload;
+            state.page = 1;
+        },
+        setSortOrder: (state, action) => {
+            state.sortOrder = action.payload;
+            state.page = 1;
+        },
+        resetFilters: (state) => {
+            state.search = '';
+            state.categoryId = '';
+            state.sortBy = '';
+            state.sortOrder = '';
+            state.sortValue = '';
+            state.page = 1;
+        },
     },
     extraReducers: builder =>
         builder
