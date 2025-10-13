@@ -7,7 +7,9 @@ import css from './PublicLayout.module.css';
 const PublicLayout = () => {
     return (
         <div className={css.wrap}>
-            <div className={css.asideBlock}>aside</div>
+            <div className={css.asideBlock}>
+                aside
+            </div>
 
             <div className={css.outletBlock}>
                 <Outlet/>
